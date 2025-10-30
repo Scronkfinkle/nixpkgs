@@ -17,7 +17,7 @@
   numpy,
   triton,
   tiktoken,
-  torch,
+  torch-bin,
   tqdm,
 
   # tests
@@ -51,7 +51,7 @@ buildPythonPackage rec {
     numba
     numpy
     tiktoken
-    torch
+    torch-bin
     tqdm
   ]
   ++ lib.optionals (lib.meta.availableOn stdenv.hostPlatform triton) [ triton ];
